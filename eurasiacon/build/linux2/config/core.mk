@@ -179,7 +179,7 @@ $(call directory-must-exist,$(TOP)/eurasiacon/build/linux2/$(PVR_BUILD_DIR))
 # final programs/libraries, and install/rc scripts.
 #
 BUILD	?= release
-OUT		?= $(TOP)/eurasiacon/binary2_$(PVR_BUILD_DIR)_$(BUILD)
+OUT		:= $(TOP)/eurasiacon/binary2_$(PVR_BUILD_DIR)_$(BUILD)
 override OUT := $(if $(filter /%,$(OUT)),$(OUT),$(TOP)/$(OUT))
 
 CONFIG_MK			:= $(OUT)/config.mk
